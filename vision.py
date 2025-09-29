@@ -6,9 +6,7 @@ import os
 import google.generativeai as genai
 from PIL import Image
 
-
-api_key = os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=api_key)
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 
 model = genai.GenerativeModel("gemini-2.5-flash")
